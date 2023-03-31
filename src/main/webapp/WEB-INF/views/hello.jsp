@@ -1,12 +1,29 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html>
+<%@ page isELIgnored="false" language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="UTF-8"%>
+<!-- <!DOCTYPE html> -->
 <html>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Hello</title>
 </head>
 <body>
-	<h1>Hello from Spring MVC</h1>
+
+	<!-- JSP expression -->
+	<%
+		Integer id = (Integer) request.getAttribute("id");
+		String name = (String) request.getAttribute("name");
+		Integer salary = (Integer) request.getAttribute("salary");
+	
+		out.println("ID: " + id);
+		out.println("Name: " + name);
+		out.println("Salary: " + salary);
+	%>
+	
+	<!-- JSP expression language -->
+	<br/>
+	ID: <b>${id}</b><br/>
+	Name: <b>${name}</b><br/>
+	Salary: <b>${salary}</b><br/>
+	
 </body>
 </html>
