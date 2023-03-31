@@ -1,4 +1,4 @@
-package com.tapioca.spring.springmvc.controlller;
+package com.tapioca.spring.springmvc.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
